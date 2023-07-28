@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>freelancinghoster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu-options {
+      list-style: none;
+      display: none;
+      position: absolute;
+      background-color: #eee;
+      padding: 10px;
+      margin-top: 5px;
+      z-index: 1;
+    }
+
+    .menu-item {
+      color: #333;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-wrapper:hover .menu-options {
+      display: block;
+    }
+
+    .mid-section {
+      text-align: center;
+      padding: 30px;
+      font-size: 24px;
+      color: #666; 
+    }
+
+    .search-button {
+      background-color: #4CAF50; 
+      border: none;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+   
+    .templates-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .template {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .template:hover {
+      transform: scale(1.1);
+    }
+
+    .template-programming {
+      background-image: url('https://i.ytimg.com/vi/kX0tq3qsY_U/maxresdefault.jpg');
+    }
+
+    .template-learning {
+      background-image: url('https://th.bing.com/th/id/OIP.mo0t4O1CZldr0lR0VihDlwHaFJ?pid=ImgDet&rs=1');
+    }
+
+    .template-business {
+      background-image: url('https://healthquestpodcast.com/wp-content/uploads/2020/08/Clipboard-Report-768x768.jpg');
+    }
+
+    .template-marketing {
+      background-image: url('https://www.hitechnectar.com/wp-content/uploads/2020/04/12-Best-Free-Brand-Monitoring-Tools-768x407.jpg');
+    }
+
+    .search-bar-wrapper {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      width: 90%; 
+      padding: 15px; 
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-wrapper" onmouseover="toggleMenuOptions(true)" onmouseout="toggleMenuOptions(false)">
+      الخدمات المقدمة
+      <ul class="menu-options" id="menuOptions">
+        <li class="menu-item" onclick="redirectTo('freelancinghosterprogpage.html')">برمجة</li>
+        <li class="menu-item" onclick="redirectTo('freelancinghosterbuismang.html')">ادارة اعمال</li>
+        <li class="menu-item">انشاء شرائح تعليمية</li>
+        <li class="menu-item" onclick="redirectTo('freelancinghostermodr.html')">اشراف</li>
+        <li class="menu-item" onclick="redirectTo('freelancinghostermarketing.html')">تسويق</li>
+      </ul>
+    </div>
+    <div class="logo" onclick="redirectTo('freelancinghoster.html')">freelancinghoster</div>
+  </header>
+  <main>
+    <div class="mid-section">
+      <h2>كافة الخدمات الإبداعية والاحترافية لتطوير وتنمية أعمالك</h2>
+      <p>ننجز أعمالك بسهولة و بأسعار تبدأ من 5$ فقط</p>
+    </div>
+
+    <div class="search-bar-wrapper">
+      <input type="text" class="search-bar" placeholder="ابحث عن خدمتك المرغوبة">
+      <button class="search-button">ابحث</button>
+    </div>
+
+  <div class="templates-wrapper">
+  <a href="'freelancinghosterprogpage.html'?category=programming" class="template template-programming">
+    <h2>برمجة</h2>
+    <p>بجميع لغات البرمجة</p>
+  </a>
+  <a href="'freelancinghosterbuismang.html'?category=business" class="template template-business">
+    <h2>ادارة اعمال</h2>
+    <p>مختلف الخدمات</p>
+  </a>
+  <a href="'freelancinghosterlearn.html'?category=learning" class="template template-learning">
+    <h2>تعلم عن بعد</h2>
+    <p>تشمل دورات مختلفة</p>
+  </a>
+  <a href="'freelancinghostermarketing.html'?category=marketing" class="template template-marketing">
+    <h2>تسويق</h2>
+    <p>نساعدك بنجاح مشروعك</p>
+  </a>
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 MoAlhammad. All rights reserved </p>
+    
+  </footer>
+
+  <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    function toggleMenuOptions(show) {
+      const menuOptions = document.getElementById('menuOptions');
+      menuOptions.style.display = show ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
+
+    
+    
